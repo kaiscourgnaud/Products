@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Affiliation Amazon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; background-color: #f4f4f4; }
+        header { background-color: #333; color: #fff; padding: 20px 0; text-align: center; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        header h1 { font-size: 2.5rem; }
+        section { padding: 100px 20px; }
+        .link-box { margin: 20px 0; padding: 15px; background-color: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .link-box a { text-decoration: none; color: #333; font-weight: bold; font-size: 1.2rem; }
+        .content { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+        .content div { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 300px; }
+        .content div:hover { transform: scale(1.05); transition: transform 0.3s ease; }
+        .footer { background-color: #333; color: #fff; text-align: center; padding: 20px; position: relative; bottom: 0; width: 100%; }
+        .footer a { color: #fff; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        .navbar { display: flex; justify-content: center; gap: 20px; padding: 10px 0; background-color: #444; position: sticky; top: 0; z-index: 999; }
+        .navbar a { color: #fff; text-decoration: none; font-weight: bold; font-size: 1rem; }
+        .navbar a:hover { text-decoration: underline; }
+        section h2 { font-size: 2rem; margin-bottom: 20px; }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .container { max-width: 1200px; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenue sur notre site d'affiliation Amazon</h1>
+</header>
+
+<div class="navbar">
+    <a href="#home">Accueil</a>
+    <a href="#produits">Produits</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<section id="home" class="container">
+    <h2>Présentation</h2>
+    <p>Bienvenue sur notre site d'affiliation Amazon. Découvrez nos produits recommandés et profitez des meilleurs prix !</p>
+</section>
+
+<section id="produits" class="container">
+    <h2>Nos Produits Recommandés</h2>
+    <div class="content">
+        <div class="link-box fade-in">
+            <a href="https://www.amazon.fr/dp/B08H8VJ8X5?tag=affiliate-id" target="_blank">Produit 1</a>
+        </div>
+        <div class="link-box fade-in">
+            <a href="https://www.amazon.fr/dp/B08J5F3G18?tag=affiliate-id" target="_blank">Produit 2</a>
+        </div>
+        <div class="link-box fade-in">
+            <a href="https://www.amazon.fr/dp/B07WFQX95D?tag=affiliate-id" target="_blank">Produit 3</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="container">
+    <h2>Contact</h2>
+    <p>Si vous avez des questions, n'hésitez pas à nous contacter.</p>
+    <ul>
+        <li>Email: contact@example.com</li>
+        <li>Téléphone: 01 23 45 67 89</li>
+        <li>Adresse: 123 Rue Exemple, Paris, France</li>
+    </ul>
+</section>
+
+<div class="footer">
+    <p>&copy; 2024 Site d'Affiliation Amazon | <a href="#home">Retour à l'accueil</a></p>
+</div>
+
+<script>
+    // Animation de défilement
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+        fadeInElements.forEach(element => {
+            if (element.getBoundingClientRect().top < window.innerHeight) {
+                element.classList.add('visible');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
